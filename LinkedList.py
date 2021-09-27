@@ -19,6 +19,7 @@ class ListNode:
 class LinkedList:
     def __init__(self, nodes: List[int] = [], head: ListNode = None) -> None:
         self.head = head
+        self.butt = None
         for node in nodes:
             self.append(ListNode(node, None))
 
@@ -31,10 +32,13 @@ class LinkedList:
     def append(self, node: ListNode) -> None:
         if self.head is None:
             self.head = node
+            self.butt = node
             return
-        for current_node in self:
-            pass
-        current_node.next = node
+        self.butt.next = node
+        self.butt = self.butt.next
+        # for current_node in self:
+        #     pass
+        # current_node.next = node
 
     def pop(self) -> Union[ListNode, None]:
         """pops off the first element if not None, otherwise returns none"""

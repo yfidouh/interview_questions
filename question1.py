@@ -84,7 +84,7 @@ test_input = generate_input(10, 3)
 pretty_print(test_input)
 
 
-# pretty_print(merge_linkedLists2(test_input))
+pretty_print(merge_linkedLists2(test_input))
 pretty_print(merge_linkedLists1(test_input))
 
 # assert str(merge_linkedLists2(test_input)) == str(merge_linkedLists1(test_input))
